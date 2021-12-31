@@ -27,7 +27,7 @@ const Navbar = () => {
                             <NavLinks to="about">Sobre nosaltres</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="shop">Tenda</NavLinks>
+                            <NavLinks to="shop">Botiga</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="about-us">Qui som</NavLinks>
