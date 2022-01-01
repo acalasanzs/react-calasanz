@@ -16,7 +16,7 @@ export var homeObjOne = {
 };
 
 export var homeObjTwo = {
-    id: 'about',
+    id: 'shop',
     lightBg: true,
     lightText: false,
     lightTextDesc: true,
@@ -33,7 +33,7 @@ export var homeObjTwo = {
 };
 
 export var homeObjThree = {
-    id: 'about',
+    id: 'about-us',
     lightBg: true,
     lightText: false,
     lightTextDesc: true,
