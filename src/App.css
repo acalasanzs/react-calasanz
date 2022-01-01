@@ -5,3 +5,6 @@
   padding: 0;
   font-family: 'Montserrat Alternates', sans-serif;
 }
+:root{
+  --theme: #2980b9;
+}
