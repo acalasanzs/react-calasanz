@@ -39,7 +39,7 @@ export const VideoBg = styled.video`
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    background: #232a34
+    background: #232a34;
 `;
 
 export const HeroContent = styled.div`
@@ -91,4 +91,11 @@ export const ArrowForward = styled(MdArrowForward)`
 export const ArrowRight = styled(MdKeyboardArrowRight)`
     margin-left: 8px;
     font-size: 28px;
+`
+
+export const Logo = styled.img`
+    display: flex;
+    justify-self: center;
+    padding: 0 0 50px 0;
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.5));
 `
