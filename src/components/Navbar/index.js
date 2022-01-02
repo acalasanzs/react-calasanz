@@ -1,5 +1,7 @@
-import React from 'react';
-import {FaBars,FaCarAlt} from 'react-icons/fa'
+import React, {useState, useEffect} from 'react';
+import {FaBars} from 'react-icons/fa'
+import { IconContext } from 'react-icons/lib';
+import { animateScroll as scroll} from 'react-scroll'
 import { 
     Nav,
     NavbarContainer,
@@ -13,40 +15,60 @@ import {
 } from './NavbarElements.js'
 
 const Navbar = ({toggle}) => {
+    const [scrollNav, setScrollNav] = useState(false);
+
+    const changeNav = _=>{
+        if(window.scrollY >= 80) {
+            setScrollNav(true)
+        }else{
+            setScrollNav(false)
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeNav)
+    }, []);
+
+    const toggleHome = () => {
+        scroll.scrollToTop()
+    }
+
     return (
         <>
-            <Nav>
+        <IconContext.Provider value={{color:"#d4a2e8"}}>
+            <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to="/">calasanz</NavLogo>
+                    <NavLogo to="/" onClick={toggleHome}>calasanz</NavLogo>
                     {/* <MobileLogo to="/" src=""></MobileLogo> */}
                     <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about">Sobre nosaltres</NavLinks>
+                            <NavLinks to="about" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Sobre nosaltres</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="shop">Botiga</NavLinks>
+                            <NavLinks to="shop" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Botiga</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="about-us">Qui som</NavLinks>
+                            <NavLinks to="about-us" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Qui som</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="recomendations">Recomenacions</NavLinks>
+                            <NavLinks to="recomendations" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Recomenacions</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="search">Cercar</NavLinks>
+                            <NavLinks to="search" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Cercar</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="signup">Sign up</NavLinks>
+                            <NavLinks to="signup" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Sign up</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to="/cars">Cotxes</NavBtnLink>
+                        <NavBtnLink to="/cars" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Cotxes</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>
+            </IconContext.Provider>
         </>
     )
 }
