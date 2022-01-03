@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import VanillaTilt from 'vanilla-tilt';
 
 window.addEventListener("load",()=>{
   if(window.location.hostname.match('000webhostapp')) for(var i = 0; i < 2;i++) document.body.lastElementChild.remove() // Remove WaterMarks
@@ -9,6 +10,13 @@ window.addEventListener("load",()=>{
     element.remove();
   });
   document.getElementById("root").classList.remove("hidden");
+  const cards = document.querySelectorAll(".car-card");
+  VanillaTilt.init(cards,{
+    max: 25,
+		speed: 400,
+    scale: 1.2,
+    gyroscope: true
+  });
 });
 ReactDOM.render(
   <React.StrictMode>

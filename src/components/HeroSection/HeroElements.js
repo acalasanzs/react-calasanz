@@ -92,10 +92,24 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
     margin-left: 8px;
     font-size: 28px;
 `
-
-export const Logo = styled.img`
+export const LogoWrapper = styled.div`
     display: flex;
     justify-self: center;
-    padding: 0 0 50px 0;
+    margin: 0 0 50px 0;
     filter: drop-shadow(0 0 2px rgba(255,255,255,0.5));
+    padding: 20px;
+    border-radius: 50%;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+    &:hover{
+        transition: 0.5s ease-in;
+        transform: scale(1.1);
+        background-color: #ddd;
+        border-radius: 50%;
+        width: 170px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+`
+export const Logo = styled.img`
+
 `

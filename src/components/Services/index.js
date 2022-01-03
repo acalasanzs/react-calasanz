@@ -1,29 +1,32 @@
 import React from 'react';
-import thumb1 from '../../images/card_1.webp';
-import thumb2 from '../../images/card_2.webp';
-import thumb3 from '../../images/card_3.webp';
-import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ServicesElements';
-
+import thumb1 from '../../images/fiat-500.png';
+import thumb2 from '../../images/fiat-panda.png';
+import thumb3 from '../../images/Hyundai i10.png';
+import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesBuy, ServicesCardRect, ServicesOverlay } from './ServicesElements';
 const Services = () => {
     return (
         <ServicesContainer id="services">
             <ServicesH1>Els nostres preus</ServicesH1>
             <ServicesWrapper>
-                <ServicesCard>
+                <ServicesCard className='car-card'>
+                    <ServicesH2>Fiat 500</ServicesH2>
                     <ServicesIcon src={thumb1}/>
-                    <ServicesH2>Hey there</ServicesH2>
-                    <ServicesP>Hey there</ServicesP>
+                    <ServicesCardRect />
+                    <ServicesBuy>Ves-hi!</ServicesBuy>
                 </ServicesCard>
-                <ServicesCard>
-                    <ServicesIcon src={thumb2}/>
-                    <ServicesH2>Hey there</ServicesH2>
-                    <ServicesP>Hey there</ServicesP>
-                </ServicesCard>
-                <ServicesCard>
+                <ServicesCard className='car-card'>
+                    <ServicesH2>Hyundai i10</ServicesH2>
                     <ServicesIcon src={thumb3}/>
-                    <ServicesH2>Hey there</ServicesH2>
-                    <ServicesP>Hey there</ServicesP>
+                    <ServicesCardRect />
+                    <ServicesBuy>Ves-hi!</ServicesBuy>
                 </ServicesCard>
+                <ServicesCard className='car-card'>
+                    <ServicesH2>Fiat panda</ServicesH2>
+                    <ServicesIcon src={thumb2}/>
+                    <ServicesCardRect />
+                    <ServicesBuy>Ves-hi!</ServicesBuy>
+                </ServicesCard>
+                <ServicesOverlay />
             </ServicesWrapper>
         </ServicesContainer>
     )

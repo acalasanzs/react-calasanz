@@ -5,7 +5,7 @@ import { InfoContainer, InfoRow, InfoWrapper, Column1, Column2, TextWrapper, Top
 const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2 }) => {
     return (
         <>
-          <InfoContainer lightBg={lightBg} id={id}>
+          <InfoContainer lightBg={lightBg} id={id} className='mustChange'>
             <InfoWrapper>
               <InfoRow imgStart={imgStart}>
                 <Column1>

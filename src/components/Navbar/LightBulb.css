@@ -10,7 +10,7 @@
   border-radius: 10px;
   position: absolute;
   left: 50%;
-  transform: translate(-50%,90%);
+  transform: translate(-50%,0%);
 }
 .bulb-light {
   position: relative;
