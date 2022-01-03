@@ -45,26 +45,26 @@ const Navbar = ({toggle}) => {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Sobre nosaltres</NavLinks>
+                            <NavLinks to="about" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Sobre nosaltres</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="shop" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Botiga</NavLinks>
+                            <NavLinks to="shop" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Botiga</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="about-us" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Qui som</NavLinks>
+                            <NavLinks to="about-us" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Qui som</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="recomendations" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Recomenacions</NavLinks>
+                            <NavLinks to="recomendations" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Recomenacions</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="search" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Cercar</NavLinks>
+                            <NavLinks to="search" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Cercar</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="signup" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Sign up</NavLinks>
+                            <NavLinks to="signup" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Sign up</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to="/cars" smooth={true} duration={500} spy={true} exact="true" offset={-80} activeClass='active'>Cotxes</NavBtnLink>
+                        <NavBtnLink to="/cars" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Cotxes</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>

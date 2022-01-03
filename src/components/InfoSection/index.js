@@ -15,10 +15,10 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, dark
                   <Subtitle darkText={darkText}>{description}</Subtitle>
                   <BtnWrap>
                     <Button to="home"
-                    smooth={true}
+                    smooth="true"
                     duration={500}
-                    spy={true}
-                    exact={true}
+                    spy={1}
+                    exact="true"
                     offset={-80}
                     primary={primary ? 1 : 0}
                     dark={dark ? 1 : 0}
