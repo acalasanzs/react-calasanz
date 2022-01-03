@@ -7,4 +7,20 @@
 }
 :root{
   --theme: #2980b9;
+  --theme-2: #8e44ad;
+  --background-2: #fff;
+  --backround: #f9f9f9;
+  --text-primary: #192a56;
+  --text-secondary: #193356;
+  --accent: #01bf71;
+}
+[data-theme = 'dark'] {
+  --backround: #000;
+  --background-2: #010606;
+  --text-primary: #f7f8fa;
+  --text-secondary: #fff;
+  --accent: #73378d;
+}
+#root *{
+  transition: 0.5s;
 }

@@ -4,7 +4,7 @@ import App from './App';
 
 window.addEventListener("load",()=>{
   if(window.location.hostname.match('000webhostapp')) for(var i = 0; i < 2;i++) document.body.lastElementChild.remove() // Remove WaterMarks
-  let loaders = document.getElementsByClassName("loaderScreen");
+  let loaders = document.getElementsByClassName("loadScreen");
   [...loaders].forEach(element => {
     element.remove();
   });

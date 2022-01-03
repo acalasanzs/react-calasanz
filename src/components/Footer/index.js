@@ -64,7 +64,7 @@ const Footer = () => {
                                 <FaCarAlt />
                             </SocialIconLink>
                             <SocialIconLink href="https://acalasanzs.000webhostapp.com/primary/" aria-label="Ortega Cars">
-                                <img src={oLogo} width={"32px"}/>
+                                <img src={oLogo} width={"32px"} alt="Ortega Cars"/>
                             </SocialIconLink>
                         </SocialIcons>
                     </SocialMediaWrap>

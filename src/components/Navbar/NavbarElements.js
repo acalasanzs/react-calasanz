@@ -113,3 +113,16 @@ export const NavBtnLink = styled(LinkR)`
         color: #010606;
     }
 `
+
+export const SwitchContainer = styled.div`
+    position: fixed;
+    z-index: 9;
+    right: 10%;
+    transform-origin: 50% 0%;
+    animation: 5s swing infinite;
+    transition: 0.4s;
+    margin-top: -110px;
+    &.active{
+        margin-top: -25px;
+    }
+`
