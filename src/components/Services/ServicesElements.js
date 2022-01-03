@@ -21,12 +21,15 @@ export const ServicesOverlay = styled.div`
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-image: url(${darkBg});
+    background-image: radial-gradient(ellipse at bottom left, rgba(0,163,203,1) 40%, rgba(0,163,203,0) 40%),
+    radial-gradient(ellipse at top right, rgba(0,163,203,1) 30%, rgba(0,163,203,0) 30%),
+    linear-gradient(to right, rgba(98,87,147,1) 0%, rgba(98,87,147,1) 33%, rgba(213,93,100,1) 33%, rgba(213,93,100,1) 66%, rgba(228,145,41,1) 66%);
+    filter: brightness(0.5);
     background-size: cover;
+    opacity: 1;
     background-attachment: fixed;
     left: 0;
     top: 0;
-    filter: hue-rotate(190deg);
 `
 export const ServicesWrapper = styled.div`
     max-width: 1000px;
@@ -48,6 +51,7 @@ export const ServicesWrapper = styled.div`
 `
 
 export const ServicesCard = styled.div`
+    z-index: 2;
     align-self: center;
     border-radius: 20px;
     justify-self: center;
@@ -99,16 +103,30 @@ export const ServicesCard = styled.div`
     &:nth-child(3) img, &:nth-child(1) img{
         width: 250px;
     }
-    &:nth-child(1) div{
+    &:nth-child(1) div:first-of-type{
         background: linear-gradient(0deg, #379bf7 0%, #276fb3 100%);
     }
-    &:nth-child(2) div{
+    &:nth-child(2) div:first-of-type{
         background: linear-gradient(0deg, #f73737 0%, #942323 100%);
     }
-    &:nth-child(3) div{
+    &:nth-child(3) div:first-of-type{
         background: linear-gradient(0deg, #37f7bd 0%, #23a37d 100%);
     }
-
+    &:hover ul{
+        transform: translate3d(-50%,-50%,50px);
+    }
+    &:nth-child(1) strong, &:nth-child(1) span{
+        color: #276fb3;
+    }
+    &:nth-child(2) strong, &:nth-child(2) span{
+        color: #942323
+    }
+    &:nth-child(3) strong, &:nth-child(3) span{
+        color: #23a37d
+    }
+    &:hover div:nth-of-type(2){
+        transform: translate3d(-50%,0,75px);
+    }
 `
 
 export const ServicesIcon = styled.img`
@@ -148,11 +166,6 @@ export const ServicesH2 = styled.h2`
 `
 
 export const ServicesBuy = styled.a`
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform-style: preserve-3d;
-    transform: translate3d(-50%,0,75px);
     color: white;
     background-size: 300% 100%!important;
     background-position: left;
@@ -180,4 +193,44 @@ export const ServicesCardRect = styled.div`
     opacity: 1;
     transform: translate3d(-50%,0%,0);
     transition: 0.5s;
+`
+export const ServicesCardSpecs = styled.ul`
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    width: 75%;
+    transition: 0.5s;
+    transform: translate3d(-50%,-50%,0);
+    top: 65%;
+    z-index: 11;
+    line-height: 2em;
+    font-size: 1.5em;
+    
+`
+export const ServicesCardItem = styled.li`
+    color: #d7d7d7;
+`
+export const PriceWrapper = styled.div`
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 300px;
+    height: 40px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,0px);
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-around;
+`
+export const PriceTag = styled.span`
+    font-size: 2em;
+    font-weight: bold;
+`
+export const ServicesOverlaySVG = styled.img`
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 30%;
+    height: auto;
+    z-index: 0;
 `
