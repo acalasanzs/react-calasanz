@@ -16,6 +16,10 @@ export const Nav = styled.nav`
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
+        z-index: 1000;
+    }
+    &.menu{
+        background: transparent;
     }
 `;
 
@@ -47,12 +51,13 @@ export const MobileIcon = styled.div`
     @media screen and (max-width: 1050px){
         display: block;
         position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%,60%);
-        font-size: 1.8rem;
+        right: 24px;
+        /* font-size: 1.8rem; */
         cursor: pointer;
         color: #fff;
+        display: flex;
+        align-items: center;
+        height: 80px;
     }
 `;
 

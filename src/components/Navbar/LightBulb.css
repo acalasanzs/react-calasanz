@@ -261,3 +261,41 @@
     transform: rotate(-15deg);
   }
 }
+
+
+
+/* Hamburger Toggle */
+.hamburger-toggle {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 60px;
+  overflow: hidden;
+}
+.hamburger-toggle__line {
+  fill: none;
+  transition: stroke-dasharray 400ms,stroke-dashoffset 400ms;
+  stroke: #e1d6f1;
+  stroke-width: 7.5;
+  stroke-linecap: round;
+}
+.hamburger-toggle__line--top {
+  stroke-dasharray: 40 139;
+}
+.hamburger-toggle__line--bottom {
+  stroke-dasharray: 40 180;
+}
+.hamburger-toggle.active .hamburger-toggle__line--bottom {
+  stroke-dashoffset: -138px;
+}
+.hamburger-toggle.active .hamburger-toggle__line--top {
+  stroke-dashoffset: -98px;
+}
+.hamburger-toggle.active {
+  transform: rotate(
+45deg);
+}

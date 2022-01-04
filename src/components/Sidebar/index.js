@@ -11,8 +11,8 @@ const Sidebar = ({isOpen, toggle}) => {
                 <SidebarMenu>
                     <SidebarLink to="about" onClick={toggle}>Sobre nosaltres</SidebarLink>
                     <SidebarLink to="shop" onClick={toggle}>Botiga</SidebarLink>
+                    <SidebarLink to="services" onClick={toggle}>Recomenacions</SidebarLink>
                     <SidebarLink to="about-us" onClick={toggle}>Qui som</SidebarLink>
-                    <SidebarLink to="recomendations" onClick={toggle}>Recomenacions</SidebarLink>
                     <SidebarLink to="search" onClick={toggle}>Cercar</SidebarLink>
                     <SidebarLink to="signup" onClick={toggle}>Sign up</SidebarLink>
                 </SidebarMenu>

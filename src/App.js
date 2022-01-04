@@ -11,6 +11,14 @@ function App() {
 
     const toggle = () => {
         setIsOpen(!isOpen)
+        if (isOpen) {
+          document.getElementById("nav-bar").classList.remove("menu");
+          document.getElementById("hamburger-toggle").classList.remove("active");
+        }else{
+          document.getElementById("nav-bar").classList.add("menu");
+          document.getElementById("hamburger-toggle").classList.add("active");
+        }
+    
     };
   return (
     <Router>
