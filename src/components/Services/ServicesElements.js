@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import darkBg from '../../images/image1.webp'
+// import darkBg from '../../images/image1.webp'
 
 export const ServicesContainer = styled.div`
     height: 600px;
