@@ -7,9 +7,9 @@ import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesI
 const Services = () => {
     return (
         <ServicesContainer id="services">
-            <ServicesH1>Els nostres preus</ServicesH1>
+            <ServicesH1>Els nostres preus (Recomenacions)</ServicesH1>
             <ServicesWrapper>
-                <ServicesCard className='car-card'>
+                <ServicesCard className='car-card mustChange'>
                     <ServicesH2>Fiat 500</ServicesH2>
                     <ServicesIcon src={thumb1}/>
                     <ServicesCardRect />
@@ -29,7 +29,7 @@ const Services = () => {
                         <ServicesBuy>Ves-hi!</ServicesBuy>
                     </PriceWrapper> 
                 </ServicesCard>
-                <ServicesCard className='car-card'>
+                <ServicesCard className='car-card mustChange'>
                     <ServicesH2>Hyundai i10</ServicesH2>
                     <ServicesIcon src={thumb3}/>
                     <ServicesCardRect />
@@ -49,7 +49,7 @@ const Services = () => {
                         <ServicesBuy>Ves-hi!</ServicesBuy>
                     </PriceWrapper> 
                 </ServicesCard>
-                <ServicesCard className='car-card'>
+                <ServicesCard className='car-card mustChange'>
                     <ServicesH2>Fiat panda</ServicesH2>
                     <ServicesIcon src={thumb2}/>
                     <ServicesCardRect />

@@ -9,18 +9,40 @@
   --theme: #2980b9;
   --theme-2: #8e44ad;
   --background-2: #fff;
+  --background-inverted: #000;
   --backround: #f9f9f9;
   --text-primary: #192a56;
   --text-secondary: #193356;
   --accent: #01bf71;
+  --card-bg: rgb(235, 235, 235);
+  --card-text: #131313;
+  --card-1: #8bb9da;
+  --card-2: #cf8a8a;
+  --card-3: #8acfa4;
+  --card-1b: #606ea8;
+  --card-2b: #b43e2c;
+  --card-3b: #6aa873;
+  --brightness: .9;
   --cursor-1: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAAYagMeiWXwAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAADcnAAA3JwFm6fmGAAAAB3RJTUUH5QwbETMHv14k2gAAAzlJREFUSMfFlFtoU1kYhddJc9oaq+klbYVYm6KmaBVBxQvFgUEc8EVmHLHewAd9EkTf6gUfFCn1TlEQb4gP4ozIiIp2xhmYVlu0aMVWrNeq1QbMxVNzcmlyPHsvH0xjWtPEN9fb3pv17fX//PzAj5aS7pKAAjsq4EQhwCA84m0oqHLc9wAIqJiN5fgZVRgPKwATOl7LFvGX/iDfKMgUhyA4jScZIElSUlBQMnH6YJ7Wa4C7oyUgYMGvaEA1YErN+75Hex7zWYW9yDGleEZBRY4VkC8iu/69VCnmpv3dwg38QArZ13uhcX1tUQmsXz6psjVVd23WH0hBCk3b1Jjzd9rwvzNAxozWKysXITdv2LsbxOVJ/iYRJc0BzzpiZ5ran5Ax4+pZt4tpO9SCM/lavYiQsd7OOVFYhgGsPEkKtl6Z6to2apO7cDM3up+S9F3Yajs4DLCAAbLv5ZpFRCZ9hL/cbCPjwbalTLGD+8hP8s9G5KoZAa0gjHU0yNdnoM5OAgrZQXo9G2qvIZviiE+Q3aT2dLfrSBIwk36y+z+1xJkVEEYb5CkyGjr/ixdItNKJ8YT2/FPQkxXwFrVAD6Da7K6yJMAOKzHoo5nVj+kAFD+oWNRiJAEAAFVkt6dKWJIABmEqsBcpSnabBIBSKFLqoQSAgAe6gpLJtjGzsgKURB1GrN+TAEjId3gFFM88VLHje7KXYx6g++73JmZWByH3k6bo3kxMzeglCK5hnLxzGXbH0LUJY6EMkMHOq5Vt2QClvEWGo4c3pgy9Bo9qniYl/U3H829ksqtsoCA7/3dPWvL1YRli0GvEM1JEtfqbeV2j27cwTPp82+tGbNN2EHqd0EgRiR7wlhHN39buYANDZHjw7F4UlI7kd+BcjrbJHCApzHZjbax8QAkPmRWWcTVv0yQjgxePOcq/xk8J0oyX1t9WOfbkVQEw+Awd6FH8AByowXxUIxcIBK6d2HF0sfd8+iZtB5R7c3x/xHUOSSa3OiPRzpb6OhRUfjtYqbqOu2OX/DRxRWFtvlO1KRZASiOm+/setl8/98+jdxixstJO/3I8Vlc53e5Cl1ps5uih/v57vc1vdB2Z990P0mcwlN+AJNkIlwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0xMi0yN1QxNzo1MTowNyswMDowMJjsSesAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMTItMjdUMTc6NTE6MDcrMDA6MDDpsfFXAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==') 16 16, auto;
 }
 [data-theme = 'dark'] {
   --backround: #000;
+  --background-inverted: #fff;
   --background-2: #010606;
   --text-primary: #f7f8fa;
   --text-secondary: #fff;
   --accent: #73378d;
+  --brightness: .5;
+
+  /* CARDS */
+  --card-text: #d7d7d7;
+  --card-bg: rgb(27,27,27);
+  --card-1: #0a3d62;
+  --card-2: #620a0a;
+  --card-3: #0a622a;
+  --card-1b: #276fb3;
+  --card-2b: #942323;
+  --card-3b: #23a37d;
 }
 #root .mustChange *, #root .mustChange{
   transition: background-color 0.5s, color 0.5s;

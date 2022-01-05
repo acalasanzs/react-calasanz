@@ -14,8 +14,7 @@ window.addEventListener("load",()=>{
   VanillaTilt.init(cards,{
     max: 25,
 		speed: 400,
-    scale: 1.2,
-    gyroscope: true
+    scale: 1.2
   });
 });
 ReactDOM.render(

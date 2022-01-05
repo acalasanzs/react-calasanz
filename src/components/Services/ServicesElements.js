@@ -24,7 +24,7 @@ export const ServicesOverlay = styled.div`
     background-image: radial-gradient(ellipse at bottom left, rgba(0,163,203,1) 40%, rgba(0,163,203,0) 40%),
     radial-gradient(ellipse at top right, rgba(0,163,203,1) 30%, rgba(0,163,203,0) 30%),
     linear-gradient(to right, rgba(98,87,147,1) 0%, rgba(98,87,147,1) 33%, rgba(213,93,100,1) 33%, rgba(213,93,100,1) 66%, rgba(228,145,41,1) 66%);
-    filter: brightness(0.5);
+    filter: brightness(var(--brightness));
     background-size: cover;
     opacity: 1;
     background-attachment: fixed;
@@ -59,8 +59,9 @@ export const ServicesCard = styled.div`
     width: 300px;
     margin-bottom: 40px;
     height: 400px;
-    background: linear-gradient(0deg, rgb(27,27,27) , #0a3d62  100%);
+    background: linear-gradient(0deg, var(--card-bg) , var(--card-1)  100%);
     transform-style: preserve-3d;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
 
     &::after{
         content: 'calasanz';
@@ -69,7 +70,7 @@ export const ServicesCard = styled.div`
         left: 50px;
         font-size: 2.5em;
         font-weight: 900;
-        color: rgb(255, 255, 255);
+        color: var(--background-inverted);
         opacity: 0;
         transition: 0.5s;
     }
@@ -86,10 +87,10 @@ export const ServicesCard = styled.div`
         opacity: 1;
     }
     &:nth-child(2){
-        background: linear-gradient(0deg, rgb(27,27,27) , #620a0a  100%);
+        background: linear-gradient(0deg, var(--card-bg) , var(--card-2)  100%);
     }
     &:nth-child(3){
-        background: linear-gradient(0deg, rgb(27,27,27) , #0a622a  100%);
+        background: linear-gradient(0deg, var(--card-bg) , var(--card-3)  100%);
     }
     &:nth-child(1) a{
         background: linear-gradient(90deg, var(--theme) 0%, var(--theme-2) 50%, #74b9ff 75%,#0984e3 100%);
@@ -104,25 +105,25 @@ export const ServicesCard = styled.div`
         width: 250px;
     }
     &:nth-child(1) div:first-of-type{
-        background: linear-gradient(0deg, #379bf7 0%, #276fb3 100%);
+        background: linear-gradient(0deg, #379bf7 0%, var(--card-1b) 100%);
     }
     &:nth-child(2) div:first-of-type{
-        background: linear-gradient(0deg, #f73737 0%, #942323 100%);
+        background: linear-gradient(0deg, #f73737 0%, var(--card-2b) 100%);
     }
     &:nth-child(3) div:first-of-type{
-        background: linear-gradient(0deg, #37f7bd 0%, #23a37d 100%);
+        background: linear-gradient(0deg, #37f7bd 0%, var(--card-3b) 100%);
     }
     &:hover ul{
         transform: translate3d(-50%,-50%,50px);
     }
     &:nth-child(1) strong, &:nth-child(1) span{
-        color: #276fb3;
+        color: var(--card-1b);
     }
     &:nth-child(2) strong, &:nth-child(2) span{
-        color: #942323
+        color: var(--card-2b)
     }
     &:nth-child(3) strong, &:nth-child(3) span{
-        color: #23a37d
+        color: var(--card-3b)
     }
     &:hover div:nth-of-type(2){
         transform: translate3d(-50%,0,75px);
@@ -208,7 +209,7 @@ export const ServicesCardSpecs = styled.ul`
     
 `
 export const ServicesCardItem = styled.li`
-    color: #d7d7d7;
+    color: var(--card-text);
 `
 export const PriceWrapper = styled.div`
     position: absolute;
