@@ -51,6 +51,7 @@ const Navbar = ({toggle}) => {
     const toggleHome = () => {
         scroll.scrollToTop()
     }
+
     return (
         <>
         <SwitchContainer>
@@ -124,7 +125,14 @@ const Navbar = ({toggle}) => {
                 </NavbarContainer>
             </Nav>
             </IconContext.Provider>
-            <BottomNav>
+            <BottomNav className='noselect' ref={(elem) => (elem.childNodes.forEach(el=>{
+                el.addEventListener("click",_=>{
+                    el.classList.add("active");
+                    for(var i = 0; i < el.parentNode.childNodes.length; i++) {
+                        if (el.parentNode.childNodes[i] != el) el.parentNode.childNodes[i].classList.remove("active")
+                    }
+                });
+            }))}>
                 <BottomNavItem>
                     <FaBars />
                 </BottomNavItem>

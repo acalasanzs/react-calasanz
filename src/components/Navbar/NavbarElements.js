@@ -134,10 +134,13 @@ export const SwitchContainer = styled.div`
 `
 
 export const BottomNav = styled.div`
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background:  var(--nav-bg);
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 64px;
+    height: 76px;
     display: flex;
     z-index: 1000;
     font-size: 36px;
