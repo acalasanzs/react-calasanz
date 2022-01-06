@@ -149,6 +149,7 @@ export const BottomNav = styled.div`
     filter: drop-shadow( 0 0 5px var(--background-inverted-a));
 `
 export const BottomNavItem = styled.div`
+    cursor: pointer;
     color: var(--nav);
     transition:ease-in-out .5s;
     background: var(--nav-bg);
