@@ -8,6 +8,7 @@ export var homeObjOne = {
     img: require('../../images/svg-1.svg').default,
     alt: 'Cotxe',
     primary: true,
+    imgBg: require("../../images/section1.jpg")
 };
 
 export var homeObjTwo = {
@@ -20,6 +21,7 @@ export var homeObjTwo = {
     img: require('../../images/svg-2.svg').default,
     alt: 'Cotxe',
     primary: true,
+    imgBg: require("../../images/section2.jpg")
 };
 
 export var homeObjThree = {

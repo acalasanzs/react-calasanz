@@ -2,17 +2,17 @@ import React from 'react';
 import { Button } from '../ButtonElements';
 import { InfoContainer, InfoRow, InfoWrapper, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, Img} from './InfoElements';
 
-const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2 }) => {
+const InfoSection = ({ id, imgStart, topLine, headline, description, buttonLabel, img, alt, primary }) => {
     return (
         <>
-          <InfoContainer lightBg={lightBg} id={id} className='mustChange'>
+          <InfoContainer id={id} className='mustChange'>
             <InfoWrapper>
               <InfoRow imgStart={imgStart}>
                 <Column1>
                 <TextWrapper>
                   <TopLine>{topLine}</TopLine>
-                  <Heading lightText={lightText}>{headline}</Heading>
-                  <Subtitle darkText={darkText}>{description}</Subtitle>
+                  <Heading>{headline}</Heading>
+                  <Subtitle>{description}</Subtitle>
                   <BtnWrap>
                     <Button to="home"
                     smooth="true"
@@ -21,8 +21,6 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, dark
                     exact="true"
                     offset={-80}
                     primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    dark2={dark2 ? 1 : 0}
                     >{buttonLabel}</Button>
                   </BtnWrap>
                 </TextWrapper>

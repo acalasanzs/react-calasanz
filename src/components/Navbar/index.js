@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import {FaBars} from 'react-icons/fa'
+import { FaCarAlt, FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib';
-import { animateScroll as scroll} from 'react-scroll'
+import { animateScroll as scroll} from 'react-scroll';
 import { 
     Nav,
     NavbarContainer,
@@ -12,10 +12,14 @@ import {
     NavLinks,
     NavBtn,
     NavBtnLink,
-    SwitchContainer
-} from './NavbarElements.js'
-import './LightBulb.css'
-import useLocalStorage from 'use-local-storage'
+    SwitchContainer,
+    BottomNav,
+    BottomNavItem,
+    LogoItem
+} from './NavbarElements.js';
+import './LightBulb.css';
+import logo from '../../images/logo.svg';
+import useLocalStorage from 'use-local-storage';
 
 const Navbar = ({toggle}) => {
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -120,6 +124,17 @@ const Navbar = ({toggle}) => {
                 </NavbarContainer>
             </Nav>
             </IconContext.Provider>
+            <BottomNav>
+                <BottomNavItem>
+                    <FaBars />
+                </BottomNavItem>
+                <BottomNavItem className='active'>
+                    <LogoItem src={logo}/>
+                </BottomNavItem>
+                <BottomNavItem>
+                    <FaCarAlt />
+                </BottomNavItem>
+            </BottomNav>
         </>
     )
 }

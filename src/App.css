@@ -9,9 +9,15 @@
   --theme: #2980b9;
   --theme-2: #8e44ad;
   --background-2: #fff;
+  --background-3: #202020;
+  --color-nav: #fff;
   --background-inverted: #000;
-  --backround: #f9f9f9;
+  --background-inverted-a: rgba(0, 0, 0, 0.3);
+  --background: #f9f9f9;
+  --nav: #141b1f;
+  --nav-bg: #cadffa;
   --text-primary: #192a56;
+  --text-primary-inverted: #f7f8fa;
   --text-secondary: #193356;
   --accent: #01bf71;
   --card-bg: rgb(235, 235, 235);
@@ -27,8 +33,14 @@
 }
 [data-theme = 'dark'] {
   --backround: #000;
-  --background-inverted: #fff;
+  --nav: #fff;
+  --nav-bg: linear-gradient(90deg, rgb(12, 23, 36) 0%, rgb(26, 18, 54)00%);
+  --color-nav: var(--theme);
+  --background-inverted: rgb(255, 255, 255);
+  --background-inverted-a: rgba(160, 101, 255, 0.3);
   --background-2: #010606;
+  --background-3: #010606;
+  --text-primary-inverted: #192a56;
   --text-primary: #f7f8fa;
   --text-secondary: #fff;
   --accent: #73378d;
@@ -49,4 +61,11 @@
 }
 body{
   cursor: var(--cursor-1);
+}
+@keyframes up {
+  from {
+    bottom: -64px;
+  }to{
+    bottom: 0;
+  }
 }
