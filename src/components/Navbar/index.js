@@ -2,7 +2,7 @@ import React, {useState, useEffect, createRef} from 'react';
 import { FaCarAlt, FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll} from 'react-scroll';
-import { useLocation } from 'react-router-dom'
+import { useLocation, Redirect } from 'react-router-dom'
 import { 
     Nav,
     NavbarContainer,

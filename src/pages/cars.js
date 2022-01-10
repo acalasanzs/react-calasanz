@@ -1,10 +1,9 @@
 import React from 'react'
+import Services from '../components/Services'
 
 const Cars = () => {
     return (
-        <div>
-            <h1>Cars</h1>
-        </div>
+        <Services typeOf={true}/>
     )
 }
 
