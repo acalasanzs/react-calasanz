@@ -8,11 +8,12 @@ export const ServicesContainer = styled.div`
     justify-content: center;
     position: relative;
     align-items: center;
+    overflow-y: hidden;
 
-    @media screen and (max-width: 1050px) {
+    @media screen and (max-width: 1219px) {
         height: 1100px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 868px) {
         height: 1550px;
     }
 `
@@ -40,11 +41,11 @@ export const ServicesWrapper = styled.div`
     padding: 0 50px;
     column-gap: 150px;
     justify-content: center;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1219px) {
         grid-template-columns: 1fr 1fr;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 868px) {
         grid-template-columns: 1fr;
         padding: 0 20px;
     }
@@ -165,6 +166,11 @@ export const ServicesH2 = styled.h2`
     transition: 0.5s;
     opacity: .6;
     z-index: 10;
+
+    @media screen and (max-width: 768px) {
+        transform: translate3d(0,-20px,50px);
+        opacity: 1;
+    }
 `
 
 export const ServicesBuy = styled.a`

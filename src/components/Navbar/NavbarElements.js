@@ -175,6 +175,28 @@ export const BottomNavItem = styled.div`
         filter: brightness(10);
     }
 `
+export const BottomNavButton = styled(LinkR)`
+    cursor: pointer;
+    color: var(--nav);
+    transition:.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: var(--nav-bg);
+    width: 100%;
+    height: 56px;
+    border-radius: 50px;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: brightness(var(--brightness));
+    &.active{
+        width: 150%;
+        background: linear-gradient(90deg, rgba(84,160,255,1) 0%, rgba(153,128,250,1) 100%);
+        color: #fff;
+    }
+    &.active img{
+        filter: brightness(10);
+    }
+`
 export const LogoItem = styled.img`
     width: 36px;
     filter: brightness(1);

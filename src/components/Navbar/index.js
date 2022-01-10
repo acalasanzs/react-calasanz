@@ -2,6 +2,7 @@ import React, {useState, useEffect, createRef} from 'react';
 import { FaCarAlt, FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll} from 'react-scroll';
+import { useLocation } from 'react-router-dom'
 import { 
     Nav,
     NavbarContainer,
@@ -15,13 +16,15 @@ import {
     SwitchContainer,
     BottomNav,
     BottomNavItem,
-    LogoItem
+    LogoItem,
+    BottomNavButton
 } from './NavbarElements.js';
 import './LightBulb.css';
 import logo from '../../images/logo.svg';
 import useLocalStorage from 'use-local-storage';
 
-const Navbar = ({toggle}) => {
+const Navbar = ({toggle, setIsOpen, isOpen}) => {
+    const location = useLocation();
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
@@ -46,15 +49,53 @@ const Navbar = ({toggle}) => {
         function watchScroll() {
             window.addEventListener('scroll', changeNav)
           }
+        function closeSidebar() {
+            setIsOpen(false);
+            document.getElementById("nav-bar").classList.remove("menu");
+            document.getElementById("hamburger-toggle").classList.remove("active");
+        }
+        function openSidebar() {
+            setIsOpen(true);
+            document.getElementById("nav-bar").classList.add("menu");
+            document.getElementById("hamburger-toggle").classList.add("active");
+        }
         watchScroll();
         bottomNav.current.childNodes.forEach(el=>{
             el.addEventListener("click",_=>{
                 el.classList.add("active");
                 for(var i = 0; i < el.parentNode.childNodes.length; i++) {
-                    if (el.parentNode.childNodes[i] !== el) el.parentNode.childNodes[i].classList.remove("active")
+                    if (el.parentNode.childNodes[i] != el) el.parentNode.childNodes[i].classList.remove("active")
                 }
             });
+            switch (el.id) {
+                case "menuB":
+                    el.addEventListener("click",openSidebar);
+                    break;
+                case "homeB":
+                    el.addEventListener("click",_=>{
+                        closeSidebar();
+                        scroll.scrollToTop();
+                    });
+                    break;
+                default:
+                    el.addEventListener("click",closeSidebar);
+                    break;
+            }
         });
+        switch (location.pathname) {
+            case "/cars":
+                break;
+            default:
+                let homeB = document.getElementById("homeB");
+                if (!isOpen){
+                    homeB.classList.add("active");
+                    homeB.parentNode.childNodes.forEach(el=>{
+                    if (el != homeB) {
+                            el.classList.remove("active");
+                    } 
+                    })
+                }  
+        }
         return () => {
             window.removeEventListener('scroll',changeNav)
         }
@@ -137,15 +178,15 @@ const Navbar = ({toggle}) => {
             </Nav>
             </IconContext.Provider>
             <BottomNav className='noselect' ref={bottomNav}>
-                <BottomNavItem>
+                <BottomNavItem id='menuB'>
                     <FaBars />
                 </BottomNavItem>
-                <BottomNavItem className='active'>
+                <BottomNavButton id='homeB' to="/">
                     <LogoItem src={logo}/>
-                </BottomNavItem>
-                <BottomNavItem>
+                </BottomNavButton>
+                <BottomNavButton to="/cars" id="carsB">
                     <FaCarAlt />
-                </BottomNavItem>
+                </BottomNavButton>
             </BottomNav>
         </>
     )
