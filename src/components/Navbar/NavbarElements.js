@@ -12,7 +12,8 @@ export const Nav = styled.nav`
     font-size: 1rem;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
+    transition: 0.5s;
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -124,13 +125,9 @@ export const SwitchContainer = styled.div`
     z-index: 9;
     right: 30px;
     transform-origin: 50% 0%;
-    animation: 5s swing infinite;
     transition: 0.4s;
     margin-top: -110px;
-    &.active{
-        margin-top: -25px;
-        animation: none;
-    }
+    ${({scrollNav}) => (scrollNav ? 'margin-top: -25px;animation: none;' : 'animation: 5s swing infinite;')}
 `
 
 export const BottomNav = styled.div`
@@ -138,7 +135,7 @@ export const BottomNav = styled.div`
     border-top-right-radius: 10px;
     background:  var(--nav-bg);
     position: fixed;
-    bottom: 0;
+    bottom: -128px;
     width: 100%;
     height: 76px;
     display: flex;
@@ -146,15 +143,20 @@ export const BottomNav = styled.div`
     font-size: 36px;
     filter: drop-shadow(0px -1px 6px  rgba(0, 0, 0, 0.08)) drop-shadow(0px -2px 12px  rgba(0, 0, 0, 0.12));
     transition: cubic-bezier(0.57, 0.23, 0.08, 0.96) .45s;
-    animation: up 0.45s cubic-bezier(0.57, 0.23, 0.08, 0.96);
     justify-content: space-around;
     align-items: center;
     filter: drop-shadow( 0 0 5px var(--background-inverted-a));
+    transition: 0.45s cubic-bezier(0.57, 0.23, 0.08, 0.96);
+
+    @media screen and (max-width: 860px) {
+        bottom: 0;
+        animation: up 0.45s cubic-bezier(0.57, 0.23, 0.08, 0.96);
+    }
 `
 export const BottomNavItem = styled.div`
     cursor: pointer;
     color: var(--nav);
-    transition:ease-in-out .5s;
+    transition:.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background: var(--nav-bg);
     width: 100%;
     height: 56px;

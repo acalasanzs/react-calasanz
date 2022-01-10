@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, createRef} from 'react';
 import { FaCarAlt, FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll} from 'react-scroll';
@@ -32,29 +32,40 @@ const Navbar = ({toggle}) => {
   }
   document.getElementById("root").setAttribute("data-theme",theme);
     const [scrollNav, setScrollNav] = useState(false);
-
-    const changeNav = _=>{
+    const bottomNav = createRef();
+    function changeNav (){
         if(window.scrollY >= 80) {
             setScrollNav(true)
-            document.querySelector(".switch-light").parentNode.classList.add("active");
 
         }else{
             setScrollNav(false)
-            document.querySelector(".switch-light").parentNode.classList.remove("active");
         }
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', changeNav)
+        function watchScroll() {
+            window.addEventListener('scroll', changeNav)
+          }
+        watchScroll();
+        bottomNav.current.childNodes.forEach(el=>{
+            el.addEventListener("click",_=>{
+                el.classList.add("active");
+                for(var i = 0; i < el.parentNode.childNodes.length; i++) {
+                    if (el.parentNode.childNodes[i] !== el) el.parentNode.childNodes[i].classList.remove("active")
+                }
+            });
+        });
+        return () => {
+            window.removeEventListener('scroll',changeNav)
+        }
     });
 
     const toggleHome = () => {
         scroll.scrollToTop()
     }
-
     return (
         <>
-        <SwitchContainer>
+        <SwitchContainer scrollNav={scrollNav}>
             <div class={"switch-light "+theme}>
             <div class="line"></div>
             <a class="bulb-light" onClick={switchTheme}>
@@ -125,14 +136,7 @@ const Navbar = ({toggle}) => {
                 </NavbarContainer>
             </Nav>
             </IconContext.Provider>
-            <BottomNav className='noselect' ref={(elem) => (elem.childNodes.forEach(el=>{
-                el.addEventListener("click",_=>{
-                    el.classList.add("active");
-                    for(var i = 0; i < el.parentNode.childNodes.length; i++) {
-                        if (el.parentNode.childNodes[i] != el) el.parentNode.childNodes[i].classList.remove("active")
-                    }
-                });
-            }))}>
+            <BottomNav className='noselect' ref={bottomNav}>
                 <BottomNavItem>
                     <FaBars />
                 </BottomNavItem>

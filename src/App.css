@@ -34,7 +34,7 @@
 [data-theme = 'dark'] {
   --backround: #000;
   --nav: #fff;
-  --nav-bg: linear-gradient(90deg, rgb(12, 23, 36) 0%, rgb(26, 18, 54)00%);
+  --nav-bg: linear-gradient(90deg, rgb(12, 23, 36) 0%, rgb(5, 5, 5)00%);
   --color-nav: var(--theme);
   --background-inverted: rgb(255, 255, 255);
   --background-inverted-a: rgba(160, 101, 255, 0.3);
