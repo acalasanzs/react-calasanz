@@ -247,7 +247,7 @@ export const ServicesOverlaySVG = styled.img`
     height: auto;
     z-index: 0;
 
-    @media screen and(max-width: 860px) {
+    @media screen and (max-width: 860px) {
         bottom: ${({typeOf}) => (typeOf? "64px" : "0")};
     }
 `

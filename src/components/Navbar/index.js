@@ -2,7 +2,7 @@ import React, {useState, useEffect, createRef} from 'react';
 import { FaCarAlt, FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll} from 'react-scroll';
-import { useLocation, Redirect } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { 
     Nav,
     NavbarContainer,
@@ -24,6 +24,10 @@ import logo from '../../images/logo.svg';
 import useLocalStorage from 'use-local-storage';
 
 const Navbar = ({toggle, setIsOpen, isOpen}) => {
+    const [windowSize, setWindowSize] = useState({
+        width: undefined,
+        height: undefined,
+      });
     const homeB = createRef();
     const carsB = createRef();
     const location = useLocation();
@@ -88,7 +92,7 @@ const Navbar = ({toggle, setIsOpen, isOpen}) => {
             case "/cars":
                 if (!isOpen){
                 carsB.current.classList.add("active");
-                console.log(location.pathname)
+                //console.log(location.pathname)
                 bottomNav.current.childNodes.forEach(el=>{
                     if (el != carsB.current) {
                             el.classList.remove("active");
@@ -98,7 +102,7 @@ const Navbar = ({toggle, setIsOpen, isOpen}) => {
             break;
             default:
                 if (!isOpen){
-                    console.log(location.pathname)
+                    //console.log(location.pathname)
                     homeB.current.classList.add("active");
                     bottomNav.current.childNodes.forEach(el=>{
                     if (el != homeB.current) {
@@ -108,6 +112,28 @@ const Navbar = ({toggle, setIsOpen, isOpen}) => {
                 }
                 break;
         }
+        var doit; //bounce effect
+        function handleResize() {
+            clearInterval(doit);
+            doit = setTimeout(_=>{
+                setWindowSize({
+                    width: window.innerWidth,
+                    height: window.innerHeight
+                })
+                console.log(isOpen)
+                if (isOpen) {
+                    let menuB = document.getElementById("menuB");
+                    
+                    menuB.parentNode.childNodes.forEach(el=>{
+                        el.classList.remove("active");
+                    });
+                    menuB.classList.add("active");
+                }
+            },150);
+        }
+        
+        // add event listener to resize
+        window.addEventListener("resize", handleResize);
         return () => {
             window.removeEventListener('scroll',changeNav)
         }

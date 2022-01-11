@@ -33,5 +33,17 @@ export var homeObjThree = {
     imgStart: true,
     img: require('../../images/svg-3.svg').default,
     alt: 'Cotxe',
-    primary: true,
+    primary: true
 };
+
+export const recanvis = {
+    id: 'recanvis',
+    topLine: 'Recanvis pel teu motor',
+    headline: "Darrere de cada acord milionari, de cada oportunitat guanyada, de cada renovació, de cada gran associació, hi ha una conversa.",
+    description: "I en Calasanz, estem creant una experiència que desencadena converses, celebra la innovació i connecta els punts per als equips de màrqueting, vendes i clients.",
+    buttonLabel: 'Anem-hi',
+    imgStart: true,
+    img: require('../../images/drift.png'),
+    alt: 'Cotxe',
+    primary: true
+}
