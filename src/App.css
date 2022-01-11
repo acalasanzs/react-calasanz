@@ -11,6 +11,7 @@
   --background-2: #fff;
   --background-3: #202020;
   --color-nav: #fff;
+  --gradient-a: radial-gradient(circle, rgb(245, 245, 245) 0%, rgb(73, 106, 190) 100%);
   --background-inverted: #000;
   --background-inverted-a: rgba(0, 0, 0, 0.3);
   --background: #f9f9f9;
@@ -34,6 +35,7 @@
 [data-theme = 'dark'] {
   --backround: #000;
   --nav: #fff;
+  --gradient-a: radial-gradient(circle, rgba(13,24,52,1) 0%, rgba(5,5,5,1) 100%);
   --nav-bg: linear-gradient(90deg, rgb(12, 23, 36) 0%, rgb(5, 5, 5)00%);
   --color-nav: var(--theme);
   --background-inverted: rgb(255, 255, 255);

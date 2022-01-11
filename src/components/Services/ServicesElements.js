@@ -9,6 +9,7 @@ export const ServicesContainer = styled.div`
     position: relative;
     align-items: center;
     overflow-y: hidden;
+    padding: ${({typeOf}) => (typeOf? "256px 0 128px 0" : "0")};
 
     @media screen and (max-width: 1219px) {
         height: 1100px;
@@ -22,10 +23,10 @@ export const ServicesOverlay = styled.div`
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-image: ${({typeOf}) => (typeOf?`radial-gradient(circle, rgba(13,24,52,1) 0%, rgba(5,5,5,1) 100%)`:`radial-gradient(ellipse at bottom left, rgba(0,163,203,1) 40%, rgba(0,163,203,0) 40%),
+    background-image: ${({typeOf}) => (typeOf?`var(--gradient-a)`:`radial-gradient(ellipse at bottom left, rgba(0,163,203,1) 40%, rgba(0,163,203,0) 40%),
     radial-gradient(ellipse at top right, rgba(0,163,203,1) 30%, rgba(0,163,203,0) 30%),
-    linear-gradient(to right, rgba(98,87,147,1) 0%, rgba(98,87,147,1) 33%, rgba(213,93,100,1) 33%, rgba(213,93,100,1) 66%, rgba(228,145,41,1) 66%);
-    filter: brightness(var(--brightness))`)};
+    linear-gradient(to right, rgba(98,87,147,1) 0%, rgba(98,87,147,1) 33%, rgba(213,93,100,1) 33%, rgba(213,93,100,1) 66%, rgba(228,145,41,1) 66%)`)};
+    filter: brightness(var(--brightness));
     background-size: cover;
     opacity: 1;
     background-attachment: fixed;
@@ -186,6 +187,10 @@ export const ServicesBuy = styled.a`
     &:hover{
         background-position: right!important;
     }
+
+    @media screen and (max-width: 768px) {
+        opacity: 1;
+    }
 `
 export const ServicesCardRect = styled.div`
     border-top-left-radius: 20px;
@@ -241,4 +246,8 @@ export const ServicesOverlaySVG = styled.img`
     width: 30%;
     height: auto;
     z-index: 0;
+
+    @media screen and(max-width: 860px) {
+        bottom: ${({typeOf}) => (typeOf? "64px" : "0")};
+    }
 `

@@ -60,6 +60,9 @@ export const MobileIcon = styled.div`
         align-items: center;
         height: 80px;
     }
+    @media screen and (max-width: 860px) {
+        display: none;
+    }
 `;
 
 export const NavMenu = styled.ul`

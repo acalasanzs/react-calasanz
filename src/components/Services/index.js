@@ -6,10 +6,10 @@ import ServicesSVG from '../../images/street.svg';
 import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesBuy, ServicesCardRect, ServicesOverlay, ServicesCardSpecs, ServicesCardItem, PriceWrapper, PriceTag, ServicesOverlaySVG} from './ServicesElements';
 const Services = ({typeOf}) => {
     return (
-        <ServicesContainer id="services" typeOf={typeOf}>
+        <ServicesContainer id="services" typeOf={typeOf} className="mustChange">
             <ServicesH1>Els nostres preus (Recomenacions)</ServicesH1>
             <ServicesWrapper>
-                <ServicesCard className='car-card mustChange'>
+                <ServicesCard className='car-card'>
                     <ServicesH2>Fiat 500</ServicesH2>
                     <ServicesIcon src={thumb1}/>
                     <ServicesCardRect />
@@ -29,7 +29,7 @@ const Services = ({typeOf}) => {
                         <ServicesBuy>Ves-hi!</ServicesBuy>
                     </PriceWrapper> 
                 </ServicesCard>
-                <ServicesCard className='car-card mustChange'>
+                <ServicesCard className='car-card'>
                     <ServicesH2>Hyundai i10</ServicesH2>
                     <ServicesIcon src={thumb3}/>
                     <ServicesCardRect />
@@ -49,7 +49,7 @@ const Services = ({typeOf}) => {
                         <ServicesBuy>Ves-hi!</ServicesBuy>
                     </PriceWrapper> 
                 </ServicesCard>
-                <ServicesCard className='car-card mustChange'>
+                <ServicesCard className='car-card'>
                     <ServicesH2>Fiat panda</ServicesH2>
                     <ServicesIcon src={thumb2}/>
                     <ServicesCardRect />
@@ -70,7 +70,7 @@ const Services = ({typeOf}) => {
                     </PriceWrapper> 
                 </ServicesCard>
                 <ServicesOverlay  typeOf={typeOf}/>
-                <ServicesOverlaySVG src={ServicesSVG} />
+                <ServicesOverlaySVG src={ServicesSVG} typeOf={typeOf}/>
             </ServicesWrapper>
         </ServicesContainer>
     )

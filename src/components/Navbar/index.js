@@ -24,6 +24,8 @@ import logo from '../../images/logo.svg';
 import useLocalStorage from 'use-local-storage';
 
 const Navbar = ({toggle, setIsOpen, isOpen}) => {
+    const homeB = createRef();
+    const carsB = createRef();
     const location = useLocation();
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
@@ -84,17 +86,27 @@ const Navbar = ({toggle, setIsOpen, isOpen}) => {
         });
         switch (location.pathname) {
             case "/cars":
-                break;
-            default:
-                let homeB = document.getElementById("homeB");
                 if (!isOpen){
-                    homeB.classList.add("active");
-                    homeB.parentNode.childNodes.forEach(el=>{
-                    if (el != homeB) {
+                carsB.current.classList.add("active");
+                console.log(location.pathname)
+                bottomNav.current.childNodes.forEach(el=>{
+                    if (el != carsB.current) {
+                            el.classList.remove("active");
+                    } 
+                })
+            }
+            break;
+            default:
+                if (!isOpen){
+                    console.log(location.pathname)
+                    homeB.current.classList.add("active");
+                    bottomNav.current.childNodes.forEach(el=>{
+                    if (el != homeB.current) {
                             el.classList.remove("active");
                     } 
                     })
-                }  
+                }
+                break;
         }
         return () => {
             window.removeEventListener('scroll',changeNav)
@@ -181,10 +193,10 @@ const Navbar = ({toggle, setIsOpen, isOpen}) => {
                 <BottomNavItem id='menuB'>
                     <FaBars />
                 </BottomNavItem>
-                <BottomNavButton id='homeB' to="/">
+                <BottomNavButton ref={homeB} id='homeB' to="/">
                     <LogoItem src={logo}/>
                 </BottomNavButton>
-                <BottomNavButton to="/cars" id="carsB">
+                <BottomNavButton ref={carsB} to="/cars" id="carsB">
                     <FaCarAlt />
                 </BottomNavButton>
             </BottomNav>
