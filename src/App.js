@@ -5,6 +5,7 @@ import Home from './pages';
 import Cars from './pages/cars'
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
+import Shop from './pages/shop';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} exact />
         <Route path="/cars" element={<Cars />} exact />
+        <Route path="/shop" element={<Shop />} exact />
       </Routes>
     </Router>
   );

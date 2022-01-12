@@ -1,8 +1,8 @@
 import React, {useState, useEffect, createRef} from 'react';
 import { FaCarAlt, FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib';
-import { animateScroll as scroll} from 'react-scroll';
 import { useLocation } from 'react-router-dom'
+import { animateScroll as scroll} from 'react-scroll';
 import { 
     Nav,
     NavbarContainer,
@@ -188,28 +188,28 @@ const Navbar = ({toggle, setIsOpen, isOpen}) => {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Sobre nosaltres</NavLinks>
+                            <NavLinks to="/about">Sobre nosaltres</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="shop" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Botiga</NavLinks>
+                            <NavLinks to="/shop">Botiga</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="services" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Recomenacions</NavLinks>
+                            <NavLinks to="/shop">Recomenacions</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="about-us" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Qui som</NavLinks>
+                            <NavLinks to="/aboutus">Qui som</NavLinks>
                         </NavItem>
                         <NavItem>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="search" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Cercar</NavLinks>
+                            <NavLinks to="/search" spy={true}>Cercar</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="signup" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Sign up</NavLinks>
+                            <NavLinks to="/signup" spy={true}>Sign up</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to="/cars" smooth="true" duration={500} spy={true} exact="true" offset={-80}>Cotxes</NavBtnLink>
+                        <NavBtnLink to="/cars">Cotxes</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>

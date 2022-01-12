@@ -46,4 +46,4 @@ export const recanvis = {
     img: require('../../images/drift.png'),
     alt: 'Cotxe',
     primary: true
-}
+};
