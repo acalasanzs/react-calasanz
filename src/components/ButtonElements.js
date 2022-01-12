@@ -3,7 +3,7 @@ import {Link} from 'react-scroll'
 
 export const Button = styled(Link)`
     border-radius: 50px;
-    background: ${({primary}) => (primary ? 'linear-gradient(90deg, rgba(84,160,255,1) 0%, rgba(153,128,250,1) 100%)' : 'linear-gradient(90deg, rgba(238,250,39,1) 0%, rgba(108,156,15,1) 100%)')};
+    background: ${({primary}) => (primary ? 'linear-gradient(90deg, rgba(84,160,255,1) 0%, rgba(153,128,250,1) 100%)' : 'rgba(238,250,39,1)')};
     white-space: nowrap;
     padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
     color: ${({dark}) => (dark ? '#010606' : '#fff')};

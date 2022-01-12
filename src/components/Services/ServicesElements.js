@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import darkBg from '../../images/image1.webp'
+import darkBg from '../../images/carsbg.jpg'
 
 export const ServicesContainer = styled.div`
     height: ${({typeOf}) => (typeOf? "100vh" : "600px")};
@@ -23,7 +23,7 @@ export const ServicesOverlay = styled.div`
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-image: ${({typeOf}) => (typeOf?`var(--gradient-a)`:`radial-gradient(ellipse at bottom left, rgba(0,163,203,1) 40%, rgba(0,163,203,0) 40%),
+    background-image: ${({typeOf}) => (typeOf?`url(`+darkBg+`)`:`radial-gradient(ellipse at bottom left, rgba(0,163,203,1) 40%, rgba(0,163,203,0) 40%),
     radial-gradient(ellipse at top right, rgba(0,163,203,1) 30%, rgba(0,163,203,0) 30%),
     linear-gradient(to right, rgba(98,87,147,1) 0%, rgba(98,87,147,1) 33%, rgba(213,93,100,1) 33%, rgba(213,93,100,1) 66%, rgba(228,145,41,1) 66%)`)};
     filter: brightness(var(--brightness));
