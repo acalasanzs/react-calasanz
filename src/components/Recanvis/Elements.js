@@ -6,18 +6,20 @@ export const Event = styled.div`
     background-size: cover;
     background-attachment: fixed;
 `
+export const EventWhite = styled.div`
+    max-width: 1228px;
+    margin-right: auto;
+    margin-left: auto;
+`
 export const RecanvisSection = styled.section`
     color: #d7d7d7;
     padding-top: 1rem;
+    padding-right: 15px;
+    padding-left: 15px;
     overflow: hidden;
 `
 export const RecanvisContainer = styled.div`
-    max-width: 1000px;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
     text-align: center;
 `
 export const RecanvisRow = styled.div`
@@ -158,7 +160,6 @@ export const EventContainer = styled.div`
 `
 export const EventWrapper = styled.div`
     padding-top: 1rem;
-    max-width: 1000px;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -171,8 +172,8 @@ export const EventRow = styled.div`
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    background-color: #fff;
-    color: #111;
+    background-color: var(--background-2);
+    color: var(--background-inverted);
     &:first-of-type {
         border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -210,7 +211,7 @@ export const EventHeader = styled.div`
 `
 export const EventH2 = styled.h2`
     margin-bottom: 0;
-    color: #111;
+    color: var(--background-inverted);
     font-size: 2.91rem;
     
 `
@@ -219,24 +220,28 @@ export const EventText = styled.div`
 `
 export const EventFooter = styled.div`
     position: relative;
+    margin-right: -15px;
+    margin-left: -15px;
+    z-index: 3;
     &::after{
         height: 50%;
         max-height: 720px;
         position: absolute;
-        z-index: 1;
+        z-index: -1;
         content: "";
+        height: 50%;
         width: 100%;
-        background-color: #fff;
+        background-color: var(--background-2);
         top: 0;
-        bottom: 0;
     }
 `
 export const EventFooterWrapper = styled.div`
-    max-width: 960px;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
+    max-width: 993px;
+    z-index: 3;
     margin-left: auto;
 `
 export const Row = styled.div`
@@ -248,9 +253,7 @@ export const Row = styled.div`
 `
 export const FormContainer = styled.div`
     padding: 0;
-    max-width: 993px;
     margin: 0 auto;
-
     background: none;
     border: 0 none;
     border-radius: 0;
@@ -296,9 +299,76 @@ export const Form = styled.form`
     flex-wrap: wrap;
     color: white;
 `
-export const FormTitle = styled.div``
-export const FormBody = styled.div``
-export const FormBodyWrappper = styled.div``
-export const FormBodyContainer = styled.div``
-export const Column = styled.div``
-export const Ticket = styled.div``
+export const FormTitle = styled.div`
+    display: flex;
+   -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    border-bottom: 2px solid #8ed8f8;
+    margin: calc(50px - 1rem) 0 1.5rem;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+    padding: 0 0 10px;
+    margin: 0;
+    -webkit-box-flex: 0;
+    clear: both;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+`
+export const FormBody = styled.div`
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 0 100%
+    flex-wrap: wrap;
+    padding: 0 0 10px;
+    margin: 0;
+    clear : both;
+`
+export const FormBodyWrappper = styled.div`
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+`
+export const FormBodyContainer = styled.div`
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #111;
+    padding-top: 50px;
+`
+export const Column = styled.div`
+    padding-bottom: 0;
+    padding-right: 50px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    text-align: left;
+    @media screen and (min-width: 768px) {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    & h2 {
+        font-size: 60px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    }
+`
+export const Ticket = styled.div`
+    -webkit-box-direction: normal;
+    font-size: 20px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #c8ff00;
+`

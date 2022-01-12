@@ -1,12 +1,14 @@
 import React from 'react';
 import {Button} from '../ButtonElements'
 import bolt from '../../images/bolt.svg'
-import { Event,RecanvisSection, RecanvisContainer, RecanvisRow, RecanvisWrapper, RecanvisHeader, RecanvisH1, BlackFlash, RecanvisBolt, BlackYear, Light, RecanvisSubtitle, RecanvisSubitleSpan, RecanvisSubRow, RSRWrapper, RSRWP, RecanvisWrapperContainer, EventContainer, EventHeader, EventWrapper, EventRow, EventH2, EventText, EventFooter, EventFooterWrapper, Row, FormContainer, Form, FormTitle, FormBody, FormBodyWrappper, FormBodyContainer, Ticket, Column } from './Elements';
+import { EventWhite,Event,RecanvisSection, RecanvisContainer, RecanvisRow, RecanvisWrapper, RecanvisHeader, RecanvisH1, BlackFlash, RecanvisBolt, BlackYear, Light, RecanvisSubtitle, RecanvisSubitleSpan, RecanvisSubRow, RSRWrapper, RSRWP, RecanvisWrapperContainer, EventContainer, EventHeader, EventWrapper, EventRow, EventH2, EventText, EventFooter, EventFooterWrapper, Row, FormContainer, Form, FormTitle, FormBody, FormBodyWrappper, FormBodyContainer, Ticket, Column } from './Elements';
 import drift1 from '../../images/drift1.jpg'
 import react from '../../images/react.png'
+import forza from '../../images/forza.png'
 const Recanvis = () => {
     return (
-        <Event>
+        <Event className="mustChange">
+            <EventWhite>
             <RecanvisSection>
                 <RecanvisContainer>
                     <RecanvisRow>
@@ -30,7 +32,7 @@ const Recanvis = () => {
                                 <RecanvisSubRow>
                                     <RSRWrapper>
                                         <RSRWP>
-                                            Acceleri els ingresos, una conversació a la vegada.
+                                            Acceleri els ingresos, una conversa a la vegada.
                                         </RSRWP>
                                         <Button to="/register" style={{fontFamily: "'proxima-nova', sans-serif", fontWeight: 900, borderRadius: "10px",color:"#222", fontSize: "22px",marginTop: "15px"}}>Registrar-se</Button>
                                     </RSRWrapper>
@@ -45,7 +47,7 @@ const Recanvis = () => {
                     <EventRow>
                         <EventHeader className='flex-col'>
                             <EventH2>
-                                Tot comença amb una <Light>Conversació</Light>
+                                Tot comença amb una <Light>Conversa</Light>
                             </EventH2>
                             <img src={drift1} width={"100%"}></img>
                         </EventHeader>
@@ -70,6 +72,12 @@ const Recanvis = () => {
                     </EventRow>
                     <EventRow>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Y-Tv6ZWnkyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    </EventRow>
+                    <EventRow>
+                        <EventH2 style={{textAlign: "center",  width: "100%",
+    borderBottom: "5px solid red",
+    marginBottom: "-66px"}}>Els millors <Light>cotxes</Light>. Els millors <Light>drifters</Light>.</EventH2>
+                        <img width="100%" src={forza}/>
                     </EventRow>
                     <EventFooter>
                         <EventFooterWrapper>
@@ -102,6 +110,8 @@ const Recanvis = () => {
                     </EventFooter>
                 </EventWrapper>
             </EventContainer>
+            </EventWhite>
+           
         </Event>
     )
 }

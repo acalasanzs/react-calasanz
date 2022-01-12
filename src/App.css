@@ -59,7 +59,7 @@
   --card-3b: #23a37d;
 }
 #root .mustChange *, #root .mustChange{
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.2s, color 0.2s;
 }
 body{
   cursor: var(--cursor-1);

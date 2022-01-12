@@ -120,7 +120,6 @@ const Navbar = ({toggle, setIsOpen, isOpen}) => {
                     width: window.innerWidth,
                     height: window.innerHeight
                 })
-                console.log(isOpen)
                 if (isOpen) {
                     let menuB = document.getElementById("menuB");
                     
