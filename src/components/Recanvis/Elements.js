@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link as LinkR} from 'react-router-dom'
 import driftbg from '../../images/driftbg.jpg'
 export const Event = styled.div`
     background: url(${driftbg});
@@ -319,7 +318,7 @@ export const FormTitle = styled.div`
 export const FormBody = styled.div`
     display: flex;
     -webkit-box-flex: 1;
-    flex: 1 0 100%
+    flex: 1 0 100%;
     flex-wrap: wrap;
     padding: 0 0 10px;
     margin: 0;

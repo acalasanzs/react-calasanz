@@ -6,6 +6,7 @@ import Cars from './pages/cars'
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Shop from './pages/shop';
+import Aboutus from './pages/aboutus';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<Home />} exact />
         <Route path="/cars" element={<Cars />} exact />
         <Route path="/shop" element={<Shop />} exact />
+        <Route path="/aboutus" element={<Aboutus />} exact />
       </Routes>
     </Router>
   );
