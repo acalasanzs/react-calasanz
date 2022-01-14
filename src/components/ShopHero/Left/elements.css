@@ -1,63 +1,88 @@
-
-.container{
-    position: relative;
-    width: 100%;
-    display: flex;
-}
-
 .left-side{
     width: 30vw;
-    height: 100%;
+    height: calc(100% - 80px);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     position: fixed;
     display: flex;
+    bottom: 0;
     color: var(--text-primary);
     align-items: center;
+    transform: translateX(-100%);
+    transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
+.left-side.active{
+    transform: translateX(0);
+}
 .logo{
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 2vw;
+    font-size: 3.5rem;
     position: absolute;
-    top: 4vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: var(--nav);
+    top: 0;
+    width: 100%;
     left: -1.5vw;
     transform: rotate(-90deg);
-    user-select: none;
+}
+.logo strong{
+    color: var(--theme);
+}
+@media screen and (min-width: 1000px) {
+    .left-side{
+        width: 25vw;
+    }
+    .right-side{
+        margin-left: 25vw;
+    }
+    
+    .logo{
+        transform: rotate(0deg);
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+        font-size: 3.5rem;
+        text-align: center;
+    }
 }
 
 .sm-product{
     width: 100%;
-    height: auto;
+    margin-top: 20vh;
 }
 
 .product-index{
-    font-size: 2vw;
-    text-align: center;
+    font-size: 19vw;
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    color: rgba(255,255,255,.6);
+    z-index: 2;
 }
 
 .sm-product-img-container{
     position: relative;
-    margin: .5vw 0;
-    height: 15vw;
+    height: 50vh;
     overflow: hidden;
+    z-index: 1;
 }
 
 .sm-product-img{
     width: 100%;
-    height: 15vw;
+    height: 100%;
     object-fit: cover;
 }
 
 .sm-product-des{
     text-align: right;
-    padding: 0 .5vw;
-    line-height: 1.5vw;
-    font-size: 1vw;
+    margin: .5vh .5vw;
+    line-height: 1.5vh;
+    font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.5);
 }
 
-.logo{
+.logob{
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -65,7 +90,8 @@
     text-align: center;
 }
 
-.logo h2 {
+.logob h2 {
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 1.2rem;
 }
 
@@ -76,6 +102,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 30vw;
+    overflow-x: hidden;
 }
 
 .backdrop-img{

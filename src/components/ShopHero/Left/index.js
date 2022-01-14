@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '../../ButtonElements';
 import './elements.css'
-import carsbg from '../../../images/react.png'
+import carsbg from '../../../images/section1.jpg'
 
 const Left = () => {
+    const [load,isLoad] = useState(false);
+    useEffect(_=>{
+        isLoad(true);
+    });
     return (
         <>
-        <div className="container">
-        <div className="left-side">
-            <span className="logo">fashion</span>
+        <div className={"left-side" + (load ? " active" : "")}>
+            <span className="logo">need for <br/><strong>speed</strong></span>
             <div className="sm-product">
                 <h1 className="product-index">01</h1>
                 <div className="sm-product-img-container">
@@ -16,10 +19,9 @@ const Left = () => {
                 </div>
                 <p className="sm-product-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut mollitia adipisci aspernatur</p>
             </div>
-            <div className="logo">
+            <div className="logob">
                 <h2>calasanz</h2>
             </div>
-        </div>
         </div>
         
         </>

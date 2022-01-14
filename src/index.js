@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import VanillaTilt from 'vanilla-tilt';
 import {isMobile} from 'react-device-detect';
-
 window.addEventListener("load",()=>{
   if(window.location.hostname.match('000webhostapp')) for(var i = 0; i < 2;i++) document.body.lastElementChild.remove() // Remove WaterMarks
   let loaders = document.getElementsByClassName("loadScreen");
@@ -22,7 +21,7 @@ window.addEventListener("load",()=>{
 });
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
