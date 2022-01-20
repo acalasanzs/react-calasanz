@@ -102,7 +102,6 @@ export const AHeroText = styled.div`
     & h2 {
         font-size: 2.5rem;
         text-align: center;
-        font-family: 'Exo', sans-serif;
         margin-top: 50px;
         letter-spacing: 6px;
         width: 100%;

@@ -202,10 +202,10 @@ const Navbar = ({toggle, setIsOpen, isOpen}) => {
                         <NavItem>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="/search" spy={true}>Cercar</NavLinks>
+                            <NavLinks to="/404" spy={true}>Cercar</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="/signup" spy={true}>Sign up</NavLinks>
+                            <NavLinks to="/404" spy={true}>Sign up</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>

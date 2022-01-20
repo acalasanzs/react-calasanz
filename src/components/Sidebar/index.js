@@ -13,8 +13,8 @@ const Sidebar = ({isOpen, toggle}) => {
                     <SidebarLink to="/shop" onClick={toggle}>Botiga</SidebarLink>
                     <SidebarLink to="/shop" onClick={toggle}>Recomenacions</SidebarLink>
                     <SidebarLink to="/aboutus" onClick={toggle}>Qui som</SidebarLink>
-                    <SidebarLink to="/search" onClick={toggle}>Cercar</SidebarLink>
-                    <SidebarLink to="/signup" onClick={toggle}>Sign up</SidebarLink>
+                    <SidebarLink to="/404" onClick={toggle}>Cercar</SidebarLink>
+                    <SidebarLink to="/404" onClick={toggle}>Sign up</SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
                     <SidebarRoute to="/cars">Cotxes</SidebarRoute>

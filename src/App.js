@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar';
 import Shop from './pages/shop';
 import Aboutus from './pages/aboutus';
 import About from './pages/about';
+import NotFound from './pages/404';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/shop" element={<Shop />} exact />
         <Route path="/aboutus" element={<Aboutus />} exact />
         <Route path="/about" element={<About />} exact />
+        <Route path="/404" element={<NotFound />} exact />
       </Routes>
     </Router>
   );
