@@ -100,7 +100,7 @@ export const AHeroText = styled.div`
         
     }
     & h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
         font-family: 'Exo', sans-serif;
         margin-top: 50px;
@@ -113,18 +113,20 @@ export const AHeroText = styled.div`
             font-size: 2rem;
         }
         @media screen and (max-width: 480px){
-            font-size: 1.5rem;
+            font-size: 1.6rem;
         } 
     }
     & p {
-        font-size: 2rem;
+        font-size: 1.7rem;
         text-align: justify;
         padding: 20px;
-        color: var(--theme);
-        filter: brightness(var(--brightness-i));
+        color: var(--background-2);
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
         
         @media screen and (max-width: 1050px){
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
         @media screen and (max-width: 480px){
             font-size: 1rem;
