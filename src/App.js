@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Shop from './pages/shop';
 import Aboutus from './pages/aboutus';
+import About from './pages/about';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/cars" element={<Cars />} exact />
         <Route path="/shop" element={<Shop />} exact />
         <Route path="/aboutus" element={<Aboutus />} exact />
+        <Route path="/about" element={<About />} exact />
       </Routes>
     </Router>
   );
