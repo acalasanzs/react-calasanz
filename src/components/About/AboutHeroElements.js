@@ -81,14 +81,68 @@ export const AHeroText = styled.div`
     display: flex;
     justify-content: center;
     margin-left: auto;
+    flex-wrap: wrap;
     margin-right: auto;
     position: relative;
+    margin-bottom: 400px;
+    padding: 30px 50px;
     z-index: 4;
     max-width: 1220px;
     color: var(--background-inverted);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 30px;
-    height: 500px;
+    border-radius: 20px;
+    height: 700px;
     background: var(--background-2);
     box-shadow: 0 -15px 30 rgba(0,0,0,.4);
+    &:nth-of-type(2){
+        background: var(--background-inverted);
+        color: var(--background-2);
+        
+        
+    }
+    & h2 {
+        font-size: 3rem;
+        text-align: center;
+        font-family: 'Exo', sans-serif;
+        margin-top: 50px;
+        letter-spacing: 6px;
+        width: 100%;
+        opacity: .8;
+        padding-bottom: 20px;
+        
+        @media screen and (max-width: 1050px){
+            font-size: 2rem;
+        }
+        @media screen and (max-width: 480px){
+            font-size: 1.5rem;
+        } 
+    }
+    & p {
+        font-size: 2rem;
+        text-align: justify;
+        padding: 20px;
+        color: var(--theme);
+        filter: brightness(var(--brightness-i));
+        
+        @media screen and (max-width: 1050px){
+            font-size: 1.5rem;
+        }
+        @media screen and (max-width: 480px){
+            font-size: 1rem;
+        } 
+    }
+    & video{
+        position: relative;
+        width: 100%;
+        height: 300px;
+        border-radius: 15px;
+        box-shadow: 0 -15 30px rgba(0,0,0,.4);
+        object-fit: cover;
+    }
+`
+export const RowA = styled.div`
+    width: 100%;
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+
 `

@@ -1,18 +1,19 @@
 import React from 'react';
 import logo from '../../images/logo.svg'
 import video from '../../videos/video3.mp4'
+import video2 from '../../videos/video2.webm'
 import { Row } from '../Recanvis/Elements';
-import {AHeroContainer, AHeroBg, VideoBg, AHeroContent, ALogoWrapper, AHeroText} from './AboutHeroElements'
+import {AHeroContainer, AHeroBg, VideoBg, AHeroContent, ALogoWrapper, AHeroText, RowA} from './AboutHeroElements'
 const AboutHero = () => {
   return (
-      <>
+      <div className='mustChange'>
     <AHeroContainer>
         <AHeroBg>
             <VideoBg autoPlay loop muted src={video} />
         </AHeroBg>
         <AHeroContent>
             <ALogoWrapper>
-                <img src={logo} style={{filter: "brightness(2)"}} width="120px" alt=''></img>
+                <img src={logo} style={{filter: "brightness(1.2)"}} width="120px" alt=''></img>
             </ALogoWrapper>
             <h2>D'on som?</h2>
             <p>Som una empresa que estem ubicats a Barcelona.</p>
@@ -29,11 +30,24 @@ const AboutHero = () => {
         </div>
     </AHeroContainer>
     <AHeroText>
-        <Row>
-            <h2>Hola</h2>
-        </Row>
+        <RowA>
+            <h2>Quina és la nostre funció?</h2>
+            <p>Nosaltres et recomanem cotxes del tipus que els clients necessitin. Tambe els nostres clients poden alquilar cotxes quan ells necessitin, per exemple si estas de vacances i no tens el teu cotxe propi, amb nosaltres pots alquilar el cotxe que volguis amb les necessitats de cada client.</p>
+        </RowA>
+        <RowA>
+            <video autoPlay loop muted src={video2} />
+        </RowA>
     </AHeroText>
-    </>
+    <AHeroText>
+        <RowA style={{marginTop: "-200px"}}>
+                <video autoPlay loop muted src={video2} />
+        </RowA>
+        <RowA style={{marginTop: "-200px"}}>
+            <h2>Quina és la nostre funció?</h2>
+            <p>Nosaltres et recomanem cotxes del tipus que els clients necessitin. Tambe els nostres clients poden alquilar cotxes quan ells necessitin, per exemple si estas de vacances i no tens el teu cotxe propi, amb nosaltres pots alquilar el cotxe que volguis amb les necessitats de cada client.</p>
+        </RowA>
+    </AHeroText>
+    </div>
     );
 };
 

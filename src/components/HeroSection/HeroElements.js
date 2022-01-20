@@ -99,16 +99,12 @@ export const LogoWrapper = styled.div`
     filter: drop-shadow(0 0 2px rgba(255,255,255,0.5));
     padding: 20px;
     border-radius: 50%;
-    transition: 0.5s ease-in;
+    transform: scale(1.1);
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 170px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
     cursor: pointer;
-    &:hover{
-        transition: 0.5s ease-in;
-        transform: scale(1.1);
-        background-color: #ddd;
-        border-radius: 50%;
-        width: 170px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
 `
 export const Logo = styled.img`
 
