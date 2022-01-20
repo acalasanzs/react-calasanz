@@ -47,7 +47,7 @@ const AboutHero = () => {
             <h2>Contacte amb nosaltres</h2>
             <p style={{color: "var(--background-inverted)"}}>Si tens qualsevol dubte aquest es el nostre número de telèfon: <strong>657876987</strong>. <br/> El nostre correu: info@calasanz.com</p>
             <img style={{margin: "0 auto 0 auto"}} src= {social}
-height= "150" width= "400" />
+height= "150" />
         </RowA>
     </AHeroText>
     </div>
